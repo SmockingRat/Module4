@@ -6,11 +6,11 @@ namespace Module4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите A");
-            string A = Console.ReadLine();
-            Console.WriteLine("Введите В");
-            string B = Console.ReadLine();
-            var Result = A != B;
+            int A = 432;
+            int B = 434;
+            double X = 3.4444;
+            double Y = 3.5;
+            var Result = (A < B) || (X > Y);
             Console.WriteLine(Result);
             Console.ReadKey();
         }
