@@ -13,7 +13,7 @@ namespace Module4
 
             for(int i = 0; i < Arr.Length; i++)
             {
-                if (Arr[i] < 0)
+                if (Arr[i] > 0)
                 {
                     Accum += 1;
                 }
