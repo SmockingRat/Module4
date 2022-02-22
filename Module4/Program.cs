@@ -6,40 +6,59 @@ namespace Module4
     {
         static void Main(string[] args)
         {
-			Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+			string[] favcolor = new string[6];
 
-			var color = Console.ReadLine();
+            for(int i=0; i<favcolor.Length; i++ )
+            {
+                Console.WriteLine("Введите свой любимый цвет {0}", i+1);
+                favcolor[i] = Console.ReadLine();
+            }
 
-			switch (color)
-			{
-				case "red":
-					Console.BackgroundColor = ConsoleColor.Red;
-					Console.ForegroundColor = ConsoleColor.Black;
+            foreach (var color in favcolor)
+            {
+                switch(color)
+                {
 
-					Console.WriteLine("Your color is red!");
-					break;
+                    case "cyan":
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
 
-				case "green":
-					Console.BackgroundColor = ConsoleColor.Green;
-					Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Your color is cyan");
+                        break;
 
-					Console.WriteLine("Your color is green!");
-					break;
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
 
-				case "cyan":
-					Console.BackgroundColor = ConsoleColor.Cyan;
-					Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Your color is green");
+                        break;
 
-					Console.WriteLine("Your color is cyan!");
-					break;
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
 
-				default:
-					Console.BackgroundColor = ConsoleColor.Yellow;
-					Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Your color is red");
+                        break;
 
-					Console.WriteLine("Your didn't choose color!");
-					break;
-			}
+                    case "yellow":
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is yellow");
+                        break;
+
+                    default:
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is white");
+
+                        break;
+                
+                
+                }
+            }
+
 			Console.ReadKey();
         }
     }
