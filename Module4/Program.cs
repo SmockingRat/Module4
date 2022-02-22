@@ -7,16 +7,16 @@ namespace Module4
         static void Main(string[] args)
         {
 
-            int[] Arr = new int[] {800, 1, 34, 45, 55, 4, 56, 7, 3, 99, 312};
+            int[] Arr = new int[] {12, 33, 54, -34, -6, 6, -45, -65, -1, 0, -55 };
 
-        
-            int Accum=0;
-            
+            int Accum = 0;
 
             for(int i = 0; i < Arr.Length; i++)
             {
-                
-                Accum += Arr[i];
+                if (Arr[i] < 0)
+                {
+                    Accum += 1;
+                }
             }
 
             Console.WriteLine(Accum);
