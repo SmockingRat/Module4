@@ -7,22 +7,29 @@ namespace Module4
         static void Main(string[] args)
         {
 
-            int[,] DArr = {{1,4,3,54,55,5},{23,55,5,5,66,45},{34,55,5,3,2,4} };
+            int[] Arr = new int[] {800, 1, 34, 45, 55, 4, 56, 7, 3, 99, 312};
 
-            for(int i =0; i < DArr.GetUpperBound(1)+1; i++)
+        
+            int Accum = 0;
+
+            for(int i = 0; i < Arr.Length; i++)
             {
-                for(int j = 0; j < DArr.GetUpperBound(0)+1; j++)
+                for(int j = 0; j < Arr.Length - 1; j++)
                 {
-                    Console.Write(DArr[j,i] + " ");
+                    if (Arr[j] > Arr[j+1])
+                    {
+                        Accum = Arr[j+1];
+                        Arr[j+1] = Arr[j];
+                        Arr[j] = Accum;
+                    }
                 }
-                Console.WriteLine();
             }
 
+            foreach(int Num in Arr)
+            {
+                Console.Write(Num + " ");
+            }
 
-            Console.WriteLine("Кол-во строк");
-            Console.WriteLine(DArr.GetUpperBound(0)+1+" ");
-            Console.WriteLine("Кол-во колонок");
-            Console.WriteLine(DArr.GetUpperBound(1)+1+" ");
             Console.ReadKey();
         }
     }
