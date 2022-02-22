@@ -11,14 +11,13 @@ namespace Module4
             string YourName = Console.ReadLine();
 
             Console.WriteLine("Ваше имя по символам");
-            foreach(var ch in YourName)
+            for(int i = YourName.Length - 1; i >= 0; i--)
             {
-                Console.Write(ch + " ");
+                Console.Write(YourName[i] + " ");
                 
             }
             Console.WriteLine();
 
-            Console.WriteLine("Последняя буква вашего имени \n{0}", YourName[YourName.Length - 1 ]);
 
 			Console.ReadKey();
         }
