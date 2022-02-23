@@ -7,7 +7,7 @@ namespace Module4
         static void Main(string[] args)
         {
 
-            var anketa = (Name: "George", Age: 19, Pet: "Dog and Cat" );
+            var anketa = (Name: "George", Age: 19, Pet: "Dog and Bird" );
 
             Console.WriteLine(anketa.Name);
             Console.WriteLine(anketa.Age);
